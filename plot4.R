@@ -32,16 +32,16 @@ png(filename = "plot4.png",
     bg = "white")
 
 
-#Setting the lot arrangement' 2 rows, two collums:
-par(mfrow=c(2,2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
+#Setting the lot arrangement' 2 rows, two columns:
+par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
 
 #plot 1:
 plot(HPC2days$DateTime, HPC2days$Global_active_power, type="l", xlab=(""), 
-     ylab="global Active Power (kilowatts)"
+     ylab="global Active Power (kilowatts)")
 
 #plot 2:
 plot(HPC2days$DateTime, HPC2days$Sub_metering_1, type="l", xlab=(""), 
-     ylab="Energy sub metering"
+     ylab="Energy sub metering")
 lines(HPC2days$DateTime, HPC2days$Sub_metering_2, type="l", 
      col="red")
 lines(HPC2days$DateTime, HPC2days$Sub_metering_3, type="l", 
